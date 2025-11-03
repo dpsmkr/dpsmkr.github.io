@@ -88,7 +88,7 @@ const splits = [
 
 // Seções
 const sectionsData = [
-  {name:"Todas", items:[...audiovisual,...albums,...eps,...singles,...podcasts,...splits]},
+  {name:"Todos", items:[...audiovisual,...albums,...eps,...singles,...podcasts,...splits]},
   {name:"Audiovisual", items:audiovisual},
   {name:"Álbuns", items:albums},
   {name:"EPs / Mini-álbuns", items:eps},
@@ -97,7 +97,7 @@ const sectionsData = [
   {name:"Splits / Colaborações", items:splits}
 ];
 
-let currentFilter = { section: "Todas" };
+let currentFilter = { section: "Todos" };
 
 // ===== Funções =====
 function renderGrid() {

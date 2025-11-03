@@ -149,7 +149,7 @@ main {
   border-radius: 50%;
   cursor: pointer;
   display: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+/*  box-shadow: 0 2px 8px rgba(0,0,0,0.5);*/
   transition: transform 0.3s;
 }
 #topBtn:hover { transform: scale(1.1); }
@@ -225,13 +225,23 @@ main {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   aside button {
     font-size: 0.9rem;
     padding: 0.5rem 0.5rem;
   }
+  
+  .grid {
+    grid-template-columns: 1fr; /* apenas uma coluna */
+    min-height: auto;           /* remove o 100vh para não exagerar na altura */
+  }
+  
+  .card {
+      max-height: none;           /* remove restrição de altura se houver */
+      width: 100%;                /* ocupa toda a largura disponível */
+    }
 
   .card h3 {
     font-size: 1rem;
