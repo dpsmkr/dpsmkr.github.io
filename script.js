@@ -145,12 +145,16 @@ function renderMenu() {
     const btn = document.createElement("button");
     btn.textContent = sec.name;
 
-    btn.addEventListener("click", () => {
-      currentFilter.section = sec.name;
-      renderGrid();
-      updateActiveButtons();
-      closeMenu();
-    });
+	btn.addEventListener("click", () => {
+	  currentFilter.section = sec.name;
+	  renderGrid();
+	  updateActiveButtons();
+  
+	  // Fecha o menu apenas se a tela for menor que 768px
+	  if (window.innerWidth <= 768) {
+	    closeMenu();
+	  }
+	});
 
     btn.addEventListener("mouseenter", () => {
       btn.style.transform = "translateX(5px)";

@@ -172,10 +172,72 @@ main {
 }
 
 
-/* Responsividade mobile */
-@media(max-width:768px){
-  aside { position: relative; width: 100%; height: auto; top: 0; padding: 0.5rem; }
-  main { margin-left: 0; padding-top: calc(var(--main-padding-top) + 0.5rem); }
-  .grid { grid-template-columns: 1fr; gap: 0.75rem; }
-  .card { max-width: 100%; }
+/* ===== Responsividade ===== */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  aside {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 1rem;
+  }
+
+  #menuBtn {
+    display: inline-block;
+  }
+
+  aside {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 220px;
+    height: 100vh;
+    background: #eee;
+    transition: left 0.3s ease;
+    z-index: 200;
+  }
+
+  aside.open {
+    left: 0;
+  }
+
+  main {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: calc(var(--main-padding-top) + 1rem);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  aside button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p, .card div {
+    font-size: 0.85rem;
+  }
 }
